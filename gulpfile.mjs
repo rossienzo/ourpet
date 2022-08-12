@@ -46,10 +46,6 @@ function optimizeimg() {
     .pipe(dest('dist/img'));
 }
 
-function browserSyncReload() {
-    return browserSync.reload();
-}
-
 function webpImage() {
     return src('dist/img/*.{jpg,png,gif}')
     .pipe(imagewebp())
@@ -75,13 +71,21 @@ function useminTask() {
         .pipe(gulp.dest('dist/'));
 }
 
-function watchTask () {
+function browserSyncServe(cb) {
     browserSync.init({
         server: {
             baseDir: './'
         }
     });
+    cb();
+}
 
+function browserSyncReload(cb) {
+    browserSync.reload();
+    cb();
+}
+
+function watchTask () {
     watch(['*.html', 'assets/js/*.js'], series(browserSyncReload));
     watch('assets/sass/*.scss', series(sassTask, browserSyncReload));
 }
@@ -97,5 +101,6 @@ export const build = series(
 
 export default series(
     sassTask,
+    browserSyncServe,
     watchTask
 );
