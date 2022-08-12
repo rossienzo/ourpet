@@ -1,0 +1,38 @@
+{
+  "name": "ourpet",
+  "version": "1.0.0",
+  "description": "Project created for the 'Front-End Web UI Frameworks and Tools - Bootstrap' course activity",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "author": "Enzo Rossi",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-usemin": "^0.3.30",
+    "gulp-webp": "^4.0.1",
+    "htmlmin": "^0.0.7",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "sass": "^1.54.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "font-awesome": "^4.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
+}
