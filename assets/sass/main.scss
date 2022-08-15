@@ -1,3 +1,128 @@
-body {
-    background-color: brown;
+// Import
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+
+// Font Variables
+$roboto: 'Montserrat', sans-serif;
+
+// Colors Variables
+$bg-orange: #f07841;
+$bg-lite-orange: #f59b72;
+$bg-soft-orange: #c0876c;
+$bg-lite-yellow: #ffff00;
+
+// functions
+@mixin zero-margin($pad-up, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up $pad-left-right 0 $pad-left-right;
 }
+
+@mixin hover-nav-color ($color){
+    box-shadow: inset 0 -3px 0 0 $color;
+    color: $color !important;
+}
+
+// Styles
+body {
+    font-family: $roboto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.row-header {
+    @include zero-margin(110px, 0)
+}
+
+.bg-lite-orange {
+    background-color: $bg-lite-orange;
+}
+
+nav {
+    background-color: $bg-orange;
+    height: 75px;
+
+    li {
+        list-style: none;
+        margin: 0 10px;
+    }
+
+    .nav-item a {
+        color: #FFF !important;
+        font-size: 1.25em !important;
+
+        &:hover {
+            @include hover-nav-color($bg-lite-yellow);
+        }
+    }
+
+    img {
+        width: 50px;
+        margin-right: 5px;
+    }
+    
+    #User {
+        color: #FFF;
+        font-size: 1.3em;
+        &:hover {
+            color: $bg-lite-yellow;
+        }
+    }
+}
+
+#PopularCategories {
+    @include zero-margin(20px, 0);
+    padding-bottom: 20px;
+
+    #PetsCategoriesCarousel {
+        text-align: center;
+        margin-top: 20px;
+        figure {
+            border: 1px solid $bg-soft-orange;
+            img {
+                width: 240px;
+            }
+    
+            figcaption {
+                color: $bg-orange;
+                font-size: 1.2em;
+                background-color: #FFF;
+            }
+        }
+
+        .carousel-indicators {
+            bottom: -30px;
+        }
+    
+        .carousel-control-prev {
+            top: -25px; 
+            left: 15px;
+            width: 5%;
+        }
+    
+        .carousel-control-next {
+            top: -25px;
+            right: 15px;
+            width: 5%;
+        }
+    }
+
+}
+
+#Tips {
+    @include zero-margin(30px, 0);
+    padding-bottom: 20px;
+
+    .card {
+        a {
+            color: $bg-lite-orange;
+
+            &:hover {
+                color: $bg-orange;
+            }
+
+        }
+    }
+}
+
+

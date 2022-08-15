@@ -1,3 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&display=swap");
 body {
-  background-color: brown;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row-header {
+  margin: 0px auto;
+  padding: 110px 0 0 0;
+}
+
+.bg-lite-orange {
+  background-color: #f59b72;
+}
+
+nav {
+  background-color: #f07841;
+  height: 75px;
+}
+nav li {
+  list-style: none;
+  margin: 0 10px;
+}
+nav .nav-item a {
+  color: #FFF !important;
+  font-size: 1.25em !important;
+}
+nav .nav-item a:hover {
+  box-shadow: inset 0 -3px 0 0 #ffff00;
+  color: #ffff00 !important;
+}
+nav img {
+  width: 50px;
+  margin-right: 5px;
+}
+nav #User {
+  color: #FFF;
+  font-size: 1.3em;
+}
+nav #User:hover {
+  color: #ffff00;
+}
+
+#PopularCategories {
+  margin: 0px auto;
+  padding: 20px 0 0 0;
+  padding-bottom: 20px;
+}
+#PopularCategories #PetsCategoriesCarousel {
+  text-align: center;
+  margin-top: 20px;
+}
+#PopularCategories #PetsCategoriesCarousel figure {
+  border: 1px solid #c0876c;
+}
+#PopularCategories #PetsCategoriesCarousel figure img {
+  width: 240px;
+}
+#PopularCategories #PetsCategoriesCarousel figure figcaption {
+  color: #f07841;
+  font-size: 1.2em;
+  background-color: #FFF;
+}
+#PopularCategories #PetsCategoriesCarousel .carousel-indicators {
+  bottom: -30px;
+}
+#PopularCategories #PetsCategoriesCarousel .carousel-control-prev {
+  top: -25px;
+  left: 15px;
+  width: 5%;
+}
+#PopularCategories #PetsCategoriesCarousel .carousel-control-next {
+  top: -25px;
+  right: 15px;
+  width: 5%;
+}
+
+#Tips {
+  margin: 0px auto;
+  padding: 30px 0 0 0;
+  padding-bottom: 20px;
+}
+#Tips .card a {
+  color: #f59b72;
+}
+#Tips .card a:hover {
+  color: #f07841;
 }
