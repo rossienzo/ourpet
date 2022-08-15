@@ -42,6 +42,11 @@ nav {
     background-color: $bg-orange;
     height: 75px;
 
+    img {
+        width: 50px;
+        margin-right: 5px;
+    }
+
     li {
         list-style: none;
         margin: 0 10px;
@@ -56,17 +61,25 @@ nav {
         }
     }
 
-    img {
-        width: 50px;
-        margin-right: 5px;
+    input {
+        border-radius: 0 !important;
+        max-width: 150px !important;
     }
-    
+
     #User {
         color: #FFF;
         font-size: 1.3em;
         &:hover {
             color: $bg-lite-yellow;
         }
+    }
+
+    #Navbar.show{
+        background-color: $bg-lite-orange;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 30px
     }
 }
 

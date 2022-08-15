@@ -14,8 +14,13 @@
     <body>
         <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
             <div class="container">
-                <img src="./assets/img/logo.png" alt="branding">
-                <a href="/" class="navbar-brand mr-auto">ourpet</a>
+                <div class="branding d-flex">
+                    <img src="./assets/img/logo.png" alt="branding">
+                    <a href="/" class="navbar-brand mr-auto">ourpet</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div id="Navbar" class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav text-nowrap text-white">
                         <li class="nav-item">
@@ -27,18 +32,20 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">Fish</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-sm-none d-md-inline">
                             <a href="#" class="nav-link">Reptile</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Small Pets</a>
+                        <li class="nav-item d-sm-none d-md-inline">
+                            <a href="#" class="nav-link">Otters</a>
                         </li>
                     </ul>
                     <form class="" role="search">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        </div>
                     </form>
-                    <a id="User" href="#" class="ms-3"><span class="fa fa-user user"></span></a>
                 </div>
+                <a id="User" href="#" class="ms-3"><span class="fa fa-user user"></span></a>
             </div>
         </nav>
 
