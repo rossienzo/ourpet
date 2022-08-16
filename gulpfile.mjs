@@ -43,13 +43,18 @@ function optimizeimg() {
         imageminMozjpeg({ quality: 80, progressive: true}),
         imageminOptipng({ optimizationLevel: 2 })
     ]))
-    .pipe(dest('dist/img'));
+    .pipe(dest('dist/assets/img'));
 }
 
 function webpImage() {
     return src('dist/img/*.{jpg,png,gif}')
     .pipe(imagewebp())
-    .pipe(dest('dist/img'))
+    .pipe(dest('dist/assets/img'))
+}
+
+function copyfonts() {
+    return gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
+        .pipe(gulp.dest('./dist/fonts'));
 }
 
 function clean() {
@@ -96,6 +101,7 @@ export const build = series(
     compilescss,
     optimizeimg,
     webpImage,
+    copyfonts,
     useminTask
 );
 
