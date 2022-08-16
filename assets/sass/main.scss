@@ -27,6 +27,19 @@ $bg-lite-grey: #dbdbdb;
     &:hover { color: $color !important; }
 }
 
+@mixin input($max-w, $padd) {
+    input {
+        border-radius: 0 !important;
+        max-width: $max-w !important;
+        padding: $padd !important;
+        &:focus {
+            border-color: rgba(239, 176, 104, 0.8) !important;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 169, 104, 0.6) !important;
+            outline: 0 none;
+        }
+    }
+}
+
 // Styles
 body { font-family: $roboto; }
 
@@ -67,22 +80,15 @@ nav {
         .lite-grey { @include hover-nav-color($bg-lite-grey); }
     }
 
-    input {
-        border-radius: 0 !important;
-        max-width: 150px !important;
-        padding: .250rem !important;
-        &:focus {
-            border-color: rgba(239, 176, 104, 0.8) !important;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 169, 104, 0.6) !important;
-            outline: 0 none;
-        }
-    }
-
-    #User {
+    #Login {
         color: #FFF;
         font-size: 1.3em;
 
         &:hover { color: $bg-lite-yellow; }
+    }
+
+    #Navbar {
+        @include input(150px, .250rem);
     }
 
     #Navbar.show{
@@ -99,8 +105,26 @@ nav {
             margin-bottom: 10px
         }
     }
+}
 
-    
+
+
+.modal-header {
+    background-color: $bg-orange;
+    color: #FFF;
+
+    button {
+        background: none;
+        color: #FFF;
+        border: none;
+        font-size: 1.3rem;
+    }
+}
+
+.modal-body {
+    background-color: $bg-lite-orange;
+    color: white;
+    @include input(none, .250rem);
 }
 
 #PopularCategories {

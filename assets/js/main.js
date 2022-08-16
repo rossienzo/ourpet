@@ -1,7 +1,11 @@
 // JQuery
 jQuery(function() {  
 
-    $('#PetsCategoriesCarousel').carousel({ interval: 2000 });
+    $("#Login").on('click', function () {
+        $("#LoginModal").modal("show");
+    });
+
+    $('#PetsCategoriesCarousel').carousel({ interval: 5000 });
     $(window).on('resize', function() {
         if ($("#Navbar").hasClass("show"))
             $("#Navbar").removeClass("show");
