@@ -6,9 +6,14 @@ $roboto: 'Montserrat', sans-serif;
 
 // Colors Variables
 $bg-orange: #f07841;
-$bg-lite-orange: #f59b72;
+$bg-lite-orange: #ffceb8;
 $bg-soft-orange: #c0876c;
 $bg-lite-yellow: #ffff00;
+$bg-blue: #4b2ac4;
+$bg-lite-blue: #38abd1;
+
+$bg-green: #7dcf74;
+$bg-lite-grey: #dbdbdb;
 
 // functions
 @mixin zero-margin($pad-up, $pad-left-right) {
@@ -18,25 +23,18 @@ $bg-lite-yellow: #ffff00;
 
 @mixin hover-nav-color ($color){
     box-shadow: inset 0 -3px 0 0 $color;
-    color: $color !important;
+     
+    &:hover { color: $color !important; }
 }
 
 // Styles
-body {
-    font-family: $roboto;
-}
+body { font-family: $roboto; }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
-.row-header {
-    @include zero-margin(110px, 0)
-}
-
-.bg-lite-orange {
-    background-color: $bg-lite-orange;
-}
+.row-header { @include zero-margin(110px, 0) }
+    
+.bg-lite-orange { background-color: $bg-lite-orange; }
 
 nav {
     background-color: $bg-orange;
@@ -52,26 +50,39 @@ nav {
         margin: 0 10px;
     }
 
-    .nav-item a {
-        color: #FFF !important;
-        font-size: 1.25em !important;
-
-        &:hover {
-            @include hover-nav-color($bg-lite-yellow);
+    .nav-item {
+        a {
+            color: #FFF !important;
+            font-size: 1.25em !important;
         }
+
+        .lite-yellow { @include hover-nav-color($bg-lite-yellow); }
+
+        .blue { @include hover-nav-color($bg-blue); }
+
+        .lite-blue { @include hover-nav-color($bg-lite-blue);  }
+
+        .green { @include hover-nav-color($bg-green); }
+
+        .lite-grey { @include hover-nav-color($bg-lite-grey); }
     }
 
     input {
         border-radius: 0 !important;
         max-width: 150px !important;
+        padding: .250rem !important;
+        &:focus {
+            border-color: rgba(239, 176, 104, 0.8) !important;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(239, 169, 104, 0.6) !important;
+            outline: 0 none;
+        }
     }
 
     #User {
         color: #FFF;
         font-size: 1.3em;
-        &:hover {
-            color: $bg-lite-yellow;
-        }
+
+        &:hover { color: $bg-lite-yellow; }
     }
 
     #Navbar.show{
@@ -79,8 +90,17 @@ nav {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding-bottom: 30px
+        padding-bottom: 30px;
+        border: 1px solid $bg-orange;
+
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+
+        li{
+            margin-bottom: 10px
+        }
     }
+
+    
 }
 
 #PopularCategories {
@@ -90,11 +110,11 @@ nav {
     #PetsCategoriesCarousel {
         text-align: center;
         margin-top: 20px;
+
         figure {
-            border: 1px solid $bg-soft-orange;
-            img {
-                width: 240px;
-            }
+            border: 2px solid #fff;
+
+            img { width: 240px; }
     
             figcaption {
                 color: $bg-orange;
@@ -103,9 +123,7 @@ nav {
             }
         }
 
-        .carousel-indicators {
-            bottom: -30px;
-        }
+        .carousel-indicators { bottom: -30px; }
     
         .carousel-control-prev {
             top: -25px; 
@@ -128,13 +146,20 @@ nav {
 
     .card {
         a {
-            color: $bg-lite-orange;
+            color: $bg-orange;
 
-            &:hover {
-                color: $bg-orange;
-            }
-
+            &:hover { color: $bg-soft-orange; }
         }
+    }
+}
+
+footer { 
+    background-color: $bg-orange;
+    color: #FFF;
+    font-weight: 500;
+
+    p {
+        height: 100%;
     }
 }
 
