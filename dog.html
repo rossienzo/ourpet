@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- build:css css/main.css -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <!-- endbuild -->
+        <title>OurPet</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+            <div class="container">
+                <div class="branding d-flex">
+                    <img src="./assets/img/logo.png" alt="branding">
+                    <a href="/" class="navbar-brand mr-auto">ourpet</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="Navbar" class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav text-nowrap text-white">
+                        <li class="nav-item">
+                            <a href="/dog.html" class="nav-link lite-yellow-hover active">Dog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/cat.html" class="nav-link blue-hover">Cat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/fish.html" class="nav-link lite-blue-hover">Fish</a>
+                        </li>
+                        <li class="nav-item d-sm-none d-md-inline">
+                            <a href="/reptile.html" class="nav-link green-hover">Reptile</a>
+                        </li>
+                        <li class="nav-item d-sm-none d-md-inline">
+                            <a href="/otters.html" class="nav-link lite-grey-hover">Otters</a>
+                        </li>
+                    </ul>
+                    <form class="" role="search">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                </div>
+                <a id="Login" href="#" class="ms-3"><span class="fa fa-user user"></span></a>
+            </div>
+        </nav>
+
+        <div id="LoginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="close" data-bs-dismiss="modal">
+                            &times;
+                        </button>   
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                    <input type="password" class="form-control mr-1" id="exampleInputPassword3" placeholder="Password">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-warning text-white btn-sm ml-1">Sign in</button>        
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="jumbotron mb-4">
+            <div class="container">
+                <div class="row row-header">
+                    <div class="col-sm-4">
+                        <h2 class="title-border-lite-yellow">Dog</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam ducimus obcaecati odit dicta sit ut dolor dolorum possimus! Id, aut!</p>
+                    </div>
+                    <div class="col-md-8">
+                        <img src="./assets/img/dog.jpg" alt="dog" class="d-block img-fluid">
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main id="PopularBlogs" class="mb-3">
+            <div class="container shadow p-4">
+                <h2 class="mb-3 title-border-lite-yellow">Popular Blogs</h2>
+                <div id="Cards" class="row card-group justify-content-center mb-3">
+                    <div class="card">
+                        <a href="#">
+                            <small class="card-text ps-2 pt-2 pb-2 text-muted">FOOD</small>
+                            <img src="./assets/img/dog.jpg" class="card-img-top pt-2" alt="dog">
+                            <div class="card-body">
+                                <h5 class="card-title">Best Food for Dog</h5>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <a href="#">
+                            <small class="card-text ps-2 pt-2 pb-2 text-muted">BREED</small>
+                            <img src="./assets/img/dog.jpg" class="card-img-top pt-2" alt="dog">
+                            <div class="card-body">
+                                <h5 class="card-title text">What changes should I look for?</h5>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <a href="#">
+                            <small class="card-text ps-2 pt-2 pb-2 text-muted">SICKNESS</small>
+                            <img src="./assets/img/dog.jpg" class="card-img-top pt-2" alt="dog">
+                            <div class="card-body">
+                                <h5 class="card-title">Rabies, Calicivirus and Otters</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex flex-row-reverse more">
+                    <a href="#">More <span class="fa fa-arrow-down"></span></a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+               <div class="row">             
+                    <div class="col-12 d-flex justify-content-center align-middle">
+                        <span class="p-1">© Copyright 2022 ourpet</span>
+                    </div>
+               </div>
+            </div>
+        </footer>
+
+        <!-- build:js js/main.js -->
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script type="module" src="node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

@@ -32,34 +32,54 @@ nav .nav-item a {
   color: #FFF !important;
   font-size: 1.25em !important;
 }
-nav .nav-item .lite-yellow {
+nav .nav-item .lite-yellow-hover {
   box-shadow: inset 0 -3px 0 0 #ffff00;
 }
-nav .nav-item .lite-yellow:hover {
+nav .nav-item .lite-yellow-hover:hover {
   color: #ffff00 !important;
 }
-nav .nav-item .blue {
+nav .nav-item .lite-yellow-hover.active {
+  box-shadow: inset 0 -3px 0 0 #ffff00;
+  color: #ffff00 !important;
+}
+nav .nav-item .blue-hover {
   box-shadow: inset 0 -3px 0 0 #4b2ac4;
 }
-nav .nav-item .blue:hover {
+nav .nav-item .blue-hover:hover {
   color: #4b2ac4 !important;
 }
-nav .nav-item .lite-blue {
+nav .nav-item .blue-hover.active {
+  box-shadow: inset 0 -3px 0 0 #4b2ac4;
+  color: #4b2ac4 !important;
+}
+nav .nav-item .lite-blue-hover {
   box-shadow: inset 0 -3px 0 0 #38abd1;
 }
-nav .nav-item .lite-blue:hover {
+nav .nav-item .lite-blue-hover:hover {
   color: #38abd1 !important;
 }
-nav .nav-item .green {
+nav .nav-item .lite-blue-hover.active {
+  box-shadow: inset 0 -3px 0 0 #38abd1;
+  color: #38abd1 !important;
+}
+nav .nav-item .green-hover {
   box-shadow: inset 0 -3px 0 0 #7dcf74;
 }
-nav .nav-item .green:hover {
+nav .nav-item .green-hover:hover {
   color: #7dcf74 !important;
 }
-nav .nav-item .lite-grey {
+nav .nav-item .green-hover.active {
+  box-shadow: inset 0 -3px 0 0 #7dcf74;
+  color: #7dcf74 !important;
+}
+nav .nav-item .lite-grey-hover {
   box-shadow: inset 0 -3px 0 0 #dbdbdb;
 }
-nav .nav-item .lite-grey:hover {
+nav .nav-item .lite-grey-hover:hover {
+  color: #dbdbdb !important;
+}
+nav .nav-item .lite-grey-hover.active {
+  box-shadow: inset 0 -3px 0 0 #dbdbdb;
   color: #dbdbdb !important;
 }
 nav #Login {
@@ -171,4 +191,49 @@ footer {
 }
 footer p {
   height: 100%;
+}
+
+/* Category webpages */
+.title-border-lite-yellow {
+  border-bottom: 2px solid #ffff00;
+  display: inline-flex;
+}
+
+.title-border-blue {
+  border-bottom: 2px solid #4b2ac4;
+  display: inline-flex;
+}
+
+.title-border-lite-blue {
+  border-bottom: 2px solid #38abd1;
+  display: inline-flex;
+}
+
+.title-border-green {
+  border-bottom: 2px solid #7dcf74;
+  display: inline-flex;
+}
+
+.title-border-lite-grey {
+  border-bottom: 2px solid #dbdbdb;
+  display: inline-flex;
+}
+
+#PopularBlogs a {
+  color: #000;
+}
+#PopularBlogs .card {
+  width: 15rem;
+}
+#PopularBlogs .card .text-muted {
+  font-weight: bold;
+}
+#PopularBlogs .card img {
+  border-radius: 0;
+}
+#PopularBlogs .more a {
+  color: #f07841;
+}
+#PopularBlogs .more a:hover {
+  color: #dbdbdb;
 }

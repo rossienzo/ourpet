@@ -11,7 +11,6 @@ $bg-soft-orange: #c0876c;
 $bg-lite-yellow: #ffff00;
 $bg-blue: #4b2ac4;
 $bg-lite-blue: #38abd1;
-
 $bg-green: #7dcf74;
 $bg-lite-grey: #dbdbdb;
 
@@ -27,6 +26,11 @@ $bg-lite-grey: #dbdbdb;
     &:hover { color: $color !important; }
 }
 
+@mixin active-link ($color){
+    box-shadow: inset 0 -3px 0 0 $color;
+    color: $color !important; 
+}
+
 @mixin input($max-w, $padd) {
     input {
         border-radius: 0 !important;
@@ -38,6 +42,11 @@ $bg-lite-grey: #dbdbdb;
             outline: 0 none;
         }
     }
+}
+
+@mixin border-bottom($bg-color) {
+    border-bottom: 2px solid $bg-color;
+    display: inline-flex;
 }
 
 // Styles
@@ -69,15 +78,20 @@ nav {
             font-size: 1.25em !important;
         }
 
-        .lite-yellow { @include hover-nav-color($bg-lite-yellow); }
+        .lite-yellow-hover { @include hover-nav-color($bg-lite-yellow); }
+        .lite-yellow-hover.active { @include active-link($bg-lite-yellow); }
 
-        .blue { @include hover-nav-color($bg-blue); }
+        .blue-hover { @include hover-nav-color($bg-blue); }
+        .blue-hover.active { @include active-link($bg-blue); }
 
-        .lite-blue { @include hover-nav-color($bg-lite-blue);  }
+        .lite-blue-hover { @include hover-nav-color($bg-lite-blue);  }
+        .lite-blue-hover.active { @include active-link($bg-lite-blue); }
 
-        .green { @include hover-nav-color($bg-green); }
+        .green-hover { @include hover-nav-color($bg-green); }
+        .green-hover.active { @include active-link($bg-green); }
 
-        .lite-grey { @include hover-nav-color($bg-lite-grey); }
+        .lite-grey-hover { @include hover-nav-color($bg-lite-grey); }
+        .lite-grey-hover.active { @include active-link($bg-lite-grey); }
     }
 
     #Login {
@@ -106,8 +120,6 @@ nav {
         }
     }
 }
-
-
 
 .modal-header {
     background-color: $bg-orange;
@@ -188,3 +200,36 @@ footer {
 }
 
 
+/* Category webpages */
+
+// title border
+.title-border-lite-yellow { @include border-bottom($bg-lite-yellow); }
+.title-border-blue { @include border-bottom($bg-blue); }
+.title-border-lite-blue { @include border-bottom($bg-lite-blue); }
+.title-border-green { @include border-bottom($bg-green); }
+.title-border-lite-grey { @include border-bottom($bg-lite-grey); }
+
+#PopularBlogs {
+    a {
+        color: #000;
+    }
+
+    .card {
+        width: 15rem;
+        .text-muted {
+            font-weight: bold;
+        }
+
+        img {
+            border-radius: 0;
+        }
+    }
+
+    .more a {
+        color: $bg-orange;
+
+        &:hover {
+            color: $bg-lite-grey;
+        }
+    }
+}
